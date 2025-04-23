@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/factorio-family-app1/static/css/main.bf763387.css",
+    "main.css": "/factorio-family-app1/static/css/main.c8b573c6.css",
     "main.js": "/factorio-family-app1/static/js/main.11d1ae43.js",
     "index.html": "/factorio-family-app1/index.html",
-    "main.bf763387.css.map": "/factorio-family-app1/static/css/main.bf763387.css.map",
+    "main.c8b573c6.css.map": "/factorio-family-app1/static/css/main.c8b573c6.css.map",
     "main.11d1ae43.js.map": "/factorio-family-app1/static/js/main.11d1ae43.js.map"
   },
   "entrypoints": [
-    "static/css/main.bf763387.css",
+    "static/css/main.c8b573c6.css",
     "static/js/main.11d1ae43.js"
   ]
 }
