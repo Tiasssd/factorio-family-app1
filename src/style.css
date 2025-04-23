@@ -1,0 +1,197 @@
+/* ----- Глобальные стили ----- */
+body {
+  margin: 0;
+  padding: 0;
+  /* Можно задать базовый шрифт, если требуется */
+}
+
+/* Используем тег a вместо link, поскольку link – это не отображаемый элемент */
+header, nav {
+  position: relative;
+  z-index: 21;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.link
+{
+  color: rgb(255, 255, 255);
+  font-family: 'Orbitron', sans-serif;
+}
+/* ----- Стили для генеалогического древа (FamilyTree) ----- */
+.family-tree-container {
+  font-family: 'Arial', sans-serif;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.family-tree-container h1 {
+  margin-bottom: 40px;
+}
+
+.family-member {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border: 2px solid #4a6fa5;
+  border-radius: 8px;
+  background-color: #f0f8ff;
+  width: 250px;
+  margin: 0 auto 5px;
+  z-index: 1;
+}
+
+.family-member-content {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+  text-align: center;
+}
+
+.family-relation {
+  font-style: italic;
+  color: #555;
+  font-size: 14px;
+}
+
+/* Линии-соединители */
+.vertical-line {
+  width: 4px;
+  height: 30px;
+  background-color: #4a6fa5;
+  margin: -5px auto;
+}
+
+.vertical-short-line {
+  width: 3px;
+  height: 25px;
+  background-color: #4a6fa5;
+  margin: -15px auto 0px;
+}
+
+.horizontal-line {
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 3px;
+  background-color: #4a6fa5;
+}
+
+/* Модификаторы горизонтальных линий */
+.horizontal-line.parent-line {
+  width: 50%;
+}
+
+.horizontal-line.grandparent-line {
+  width: 373px;
+}
+
+/* Контейнеры для родителей и дедушек/бабушек */
+.parents-container {
+  display: flex;
+  position: relative;
+  margin-top: 20px;
+}
+
+.parent {
+  position: relative;
+  margin-right: 0px;
+}
+
+.grandparents-container {
+  display: flex;
+  position: relative;
+  margin-top: 20px;
+}
+
+.grandparent {
+  position: relative;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+/* Стили для фотографий */
+.family-photo {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+/* ----- Стили для карточки игры (GameCard) ----- */
+
+/* Импорт шрифта Orbitron (semibold) */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap');
+
+.game-background-video {
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  width: 2560px;
+  height: 1440px;
+  border: none;
+  pointer-events: none;
+  object-fit: cover;
+  filter: brightness(0.6);
+  z-index: -1;
+}
+
+/* Заголовок (логотип и название) – верхний левый угол, опущен ниже */
+.game-card-header {
+  position: fixed;
+  top: 75px; /* увеличено, чтобы опустить чуть ниже */
+  left: 20px;
+  display: flex;
+  align-items: center;
+  z-index: 20;
+  pointer-events: auto;
+}
+
+.game-logo {
+  width: 200px;
+  height: auto;
+}
+
+.game-title {
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 600;
+  font-size: 48pt;
+  margin-left: 10px;
+  color: #fff;
+}
+
+/* Контент карточки – нижний правый угол */
+.game-card-content {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 15px;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  text-align:justify;
+  pointer-events: auto;
+  color: #fff;
+  z-index: 20;
+  font-family: 'Orbitron', sans-serif; /* Присваиваем тот же шрифт */
+  font-weight: 600;
+  font-size: 24pt;
+  width: 900px;
+  height: 500px;
+}
+
+/* Ссылки в карточке */
+.game-link,
+.game-wiki-link {
+  display: block;
+  margin-bottom: 10px;
+  color: #00ccff;
+  text-decoration: none;
+  text-align:center;
+}
+
+.game-link:hover,
+.game-wiki-link:hover {
+  text-decoration: underline;
+}
